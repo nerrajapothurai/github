@@ -1,0 +1,16 @@
+package simple;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Handing {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","D:\\testing\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("ranford bank");
+		driver.findElement(By.name("btnK")).click();
+	}
+}

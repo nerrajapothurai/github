@@ -1,0 +1,16 @@
+package simple;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Frame {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","D:\\testing\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://www.w3schools.com");
+		driver.findElement(By.xpath("/html/body/div[5]/div/a[1]/i")).click();
+		driver.findElement(By.name("search")).sendKeys("json");
+	}
+
+}

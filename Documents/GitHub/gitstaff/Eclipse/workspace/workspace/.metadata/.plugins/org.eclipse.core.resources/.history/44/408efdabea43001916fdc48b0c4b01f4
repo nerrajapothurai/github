@@ -1,0 +1,51 @@
+package simple;
+
+
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ba {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","D:\\testing\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http//www.spicejet.com");
+		 driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTNR")).click();
+		 
+		WebElement e= driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTNR"));
+		
+		List<WebElement>   list=e.findElements(By.tagName("a"));
+		
+		
+	int count=	list.size();
+		
+		
+	for(int i=0;i<count;i++)
+	{
+		   String x=list.get(i).getText();
+		   
+		   System.out.println(x);
+		   
+		   if(x.contains("Goa (GOI)"))
+		   {
+			   list.get(i).click();
+			   break;
+		   }
+	}
+	WebElement e1=driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTNR"));
+	List<WebElement>   list1=e1.findElements(By.tagName("d"));
+	
+	int count1=list1.size();
+	for(int j=0;j<count1;j++)
+	{
+		String x1=list.get(j).getText();
+		System.out.println(x1);
+	}
+	}
+	}
+

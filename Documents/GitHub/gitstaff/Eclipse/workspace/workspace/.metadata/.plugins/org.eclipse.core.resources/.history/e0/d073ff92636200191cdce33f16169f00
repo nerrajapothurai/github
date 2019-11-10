@@ -1,0 +1,24 @@
+package com.ranfordbank1;
+
+import org.testng.annotations.Test;
+
+public class TestExecution extends Repository
+
+{
+	@Test(priority=0)
+	public void verify_launch()
+	{
+		launch();
+	}
+	@Test(priority=1)
+	public void verify_As()
+	{
+		As();
+	}
+	@Test(priority=2)
+	public void verify_Branches()
+	{
+		Branches();
+	}
+	}
+

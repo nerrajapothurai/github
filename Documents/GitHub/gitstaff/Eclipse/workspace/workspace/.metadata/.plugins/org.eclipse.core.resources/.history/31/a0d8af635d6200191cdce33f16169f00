@@ -1,0 +1,27 @@
+package com.ranfordbank1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import library.As;
+
+public class Repository
+{
+ WebDriver driver;
+public  void launch()
+{
+	//System.setProperty("webdriver.chrome.driver","‪‪D:\\chromedriver_win32\\chromedriver.exe");
+	 driver=new ChromeDriver();
+	driver.get("http://srssprojects.in/cards.html");
+	
+}
+public void As()
+{
+	
+	As.username_editbox(driver).sendKeys("Admin");
+	As.pass_editbox(driver).sendKeys("Admin");
+	As.login_btn(driver).click();
+	
+}
+
+}

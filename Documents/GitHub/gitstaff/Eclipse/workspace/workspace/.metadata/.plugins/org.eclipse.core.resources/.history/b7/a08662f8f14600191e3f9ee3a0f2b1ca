@@ -1,0 +1,26 @@
+package simple;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Handing {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","D:\\testing\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://www.gmail.com/");
+		driver.findElement(By.name("identifier")).sendKeys("neerajapothurai94@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\'identifierNext\']/content/span")).click();
+		Thread.sleep(2000);
+	driver.findElement(By.name("password")).sendKeys("neeraja@31");
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\'passwordNext\']/content/span")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//div[@gh='cm']")).click();
+	
+	
+	
+	}
+}

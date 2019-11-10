@@ -1,0 +1,33 @@
+package simple;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class B {
+	
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","D:\\testing\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("http://newtours.demoaut.com/");
+	    driver.findElement(By.linkText("REGISTER")). click();
+		driver.findElement(By.name("firstName")).sendKeys("pothurai");
+		driver.findElement(By.name("lastName")).sendKeys("neeraja");
+		driver.findElement(By.name("phone")).sendKeys("9985017139");
+		driver.findElement(By.id("userName")).sendKeys("neerajapothurai94");
+		driver.findElement(By.name("address1")).sendKeys("ananatpur");
+		driver.findElement(By.name("address2")).sendKeys("ananatpur2");
+		 driver.findElement(By.name("city")).sendKeys("anatapur");
+	    driver.findElement(By.name("state")).sendKeys("andhra");
+	    driver.findElement(By.name("postalCode")).sendKeys("515731");
+	    driver.findElement(By.name("email")).sendKeys("neerajapothurai94");
+	    driver.findElement(By.name("password")).sendKeys("neeraja@31");
+	    driver.findElement(By.name("confirmPassword")).sendKeys("neeraja231");
+	    driver.findElement(By.name("register")).click();
+	}
+}
+	
+	
+

@@ -1,0 +1,32 @@
+package simple;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+
+
+public class D {
+	
+	
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","D:\\testing\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://www.google.com");
+		driver.findElement(By.name("q")).sendKeys("ranfordbank");
+		Thread.sleep(1500);
+		driver.findElement(By.name("btnK")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//*[@id=\'rso\']/div[1]/div/div[1]/div/div/div[1]/a/h3")).click();
+		driver.findElement(By.xpath("//*[@id='Table_01']/tbody/tr/td[2]/a/img")).click();
+		 driver.findElement(By.xpath("//*[@id=\'drlist\']")).click();
+	
+	
+		
+	}
+}

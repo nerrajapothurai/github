@@ -1,0 +1,50 @@
+package com.ranfordbank1;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import Utility.Generic;
+import library.Admin;
+import library.As;
+import library.BranchCreation;
+
+
+public class Repository
+{
+ WebDriver driver;
+public  void launch()
+{
+	//System.setProperty("webdriver.chrome.driver","‪‪D:\\chromedriver_win32\\chromedriver.exe");
+	 driver=new ChromeDriver();
+	driver.get("http://srssprojects.in/home.aspx");
+	
+}
+public void As()
+{
+	
+	As.username_editbox(driver).sendKeys("Admin");
+	As.pass_editbox(driver).sendKeys("Admin");
+	As.login_btn(driver).click();
+}
+public void Branches()
+{
+	Admin.Branches_btn(driver).click();
+}
+public void  Branchcreation()
+{
+  	Generic.dp_handle(BranchCreation.Country_editbox(driver), "INDIA");
+	Generic.dp_handle(BranchCreation.State_editbox(driver), "Andhra Pradesh");
+	Generic.dp_handle(BranchCreation.City_editbox(driver), "Hyderbad");
+	BranchCreation.Search_btn(driver).click();
+	//BranchCreation.Clear_btn(driver).click();
+	
+	
+	
+}
+
+}
+
+
+
+
